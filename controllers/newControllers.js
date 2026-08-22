@@ -1,5 +1,10 @@
+const messages = require("../data/messages");
+
 function postMessage(req, res) {
-  const messages = req.body;
+  const newMessages = req.body;
+  const { user, message } = newMessages;
+  console.log(user);
+  console.log(message);
 
   messages.push({ user: user, text: message, added: new Date() });
 
