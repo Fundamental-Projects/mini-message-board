@@ -1,0 +1,17 @@
+<!-- index.ejs -->
+<html>
+  <head>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <ul>
+      <% messages.forEach((message) => { %>
+        <%- include('messages/message', {user: user, text:message, added:date}); %>
+      <% }); %>
+
+    </ul>
+
+    <%- include('footer') %>
+
+  </body>
+</html>
