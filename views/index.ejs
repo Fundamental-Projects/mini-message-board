@@ -9,8 +9,7 @@
     </div>
     <ul>
       <% messages.forEach((message,i) => { %>
-        <%- include('messages/message', {user: message.user, message:message.text, date:message.added}); %>
-        <%- include('messages/detail',{})  %>
+        <%- include('messages/message', {user: message.user, message:message.text, date:message.added, index:i}); %>
       <% }); %>
 
     </ul>

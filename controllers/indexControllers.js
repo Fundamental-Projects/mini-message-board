@@ -14,7 +14,7 @@ function getIndexById(req, res) {
     return res.status(404).send("Invalid Id");
   }
 
-  res.render("/details", {
+  res.render("messages/detail", {
     message: foundMessage,
   });
 }
