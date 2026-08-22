@@ -4,3 +4,5 @@ const indexRouter = Router();
 const getIndex = require("../controllers/indexControllers");
 
 indexRouter.get("/", getIndex);
+
+module.exports = indexRouter;
