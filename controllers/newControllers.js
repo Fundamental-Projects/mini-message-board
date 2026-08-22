@@ -1,10 +1,7 @@
 const messages = require("../data/messages");
 
 function postMessage(req, res) {
-  const newMessages = req.body;
-  const { user, message } = newMessages;
-  console.log(user);
-  console.log(message);
+  const { user, message } = req.body;
 
   messages.push({ user: user, text: message, added: new Date() });
 
@@ -12,7 +9,7 @@ function postMessage(req, res) {
 }
 
 function getNew(req, res) {
-  res.render("form", { messages: messages });
+  res.render("form");
 }
 
 module.exports = { postMessage, getNew };
