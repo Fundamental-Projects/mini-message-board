@@ -4,15 +4,16 @@
     <title><%= title %></title>
   </head>
   <body>
-    <div>
-      <%- include("form") %>
-    </div>
+
     <ul>
       <% messages.forEach((message,i) => { %>
         <%- include('messages/message', {user: message.user, message:message.text, date:message.added, index:i}); %>
       <% }); %>
 
     </ul>
+     <div>
+      <a href="/new">New Message</a>
+    </div>
 
     <%- include('footer') %>
 

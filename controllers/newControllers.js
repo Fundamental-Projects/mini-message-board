@@ -11,4 +11,8 @@ function postMessage(req, res) {
   res.redirect("/");
 }
 
-module.exports = postMessage;
+function getNew(req, res) {
+  res.render("form", { messages: messages });
+}
+
+module.exports = { postMessage, getNew };
