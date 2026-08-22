@@ -8,8 +8,9 @@
       <%- include("form") %>
     </div>
     <ul>
-      <% messages.forEach((message) => { %>
+      <% messages.forEach((message,i) => { %>
         <%- include('messages/message', {user: message.user, message:message.text, date:message.added}); %>
+        <%- include('messages/detail',{})  %>
       <% }); %>
 
     </ul>
