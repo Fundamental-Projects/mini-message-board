@@ -5,7 +5,7 @@ const path = require("node:path");
 const indexRouter = require("./routes/indexRouter");
 const newRouter = require("./routes/newRouter");
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
