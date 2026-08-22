@@ -1,4 +1,8 @@
 const { Router } = require("express");
 const newRouter = Router();
 
-module.exports = indexRouter;
+const postMessage = require("../controllers/newControllers");
+
+newRouter.post("/", postMessage);
+
+module.exports = newRouter;

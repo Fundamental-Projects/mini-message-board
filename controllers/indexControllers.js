@@ -12,7 +12,7 @@ const messages = [
 ];
 
 function getIndex(req, res) {
-  res.render("index", { text: text, user: user, added: added });
+  res.render("index", { title: "Mini Messageboard", messages: messages });
 }
 
 module.exports = getIndex;
